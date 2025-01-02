@@ -1,0 +1,340 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+
+
+*
+{
+    margin: 0;
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+
+  font-family: "Dosis", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: whitesmoke;
+
+}
+
+.main
+{
+    background-color: rgb(24, 23, 23);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 30px;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.main>.section
+{
+    width: 100%;
+}
+
+.main .home
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.main nav
+{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.main nav a 
+{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    
+}
+
+.main a:hover
+{
+    color: rgb(141, 152, 188);
+}
+
+.primary-heading
+{
+    font-size: 5rem;
+    text-transform: uppercase;
+}
+
+.plane-text
+{
+    font-size: 1.4rem;
+}
+
+span 
+{
+    color: aquamarine;
+}
+
+.head h1:hover 
+{
+    color: rgb(141, 152, 188);
+}
+
+.home-icon svg
+{
+    width: 1%;
+}
+
+.home .prof-pic
+{
+    height: 400px;
+    width: 400px;
+    background: rgb(43, 43, 43);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+    margin-left: 10%;
+}
+
+.prof-pic img 
+{
+    height: 100%;
+    /* margin: 0px; */
+}
+
+.home .prof-pic:hover 
+{
+    img{transform: translateY(-30px) scale(1.2);
+    transition: transform.3s;}
+}
+
+.about
+{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: center;
+    height: 100vh;
+}
+
+.about-image
+{
+    height: 400px;
+    width: 400px;
+    border: 10px rgb(43, 43, 43) solid;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px rgb(120, 120, 120), 0px 0px 40px rgb(120, 120, 120);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.about-image img 
+{
+    height: 100%;
+    /* margin-top: 40px; */
+}
+.about-text
+{
+    width: 50%;
+    text-align: center;
+}
+
+.service,.project
+{
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    padding-top: 7%;
+}
+
+.project.card
+{
+    height: 512px;
+    width: 512px;
+    border: 1px solid #00ffffa7;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-direction: column;
+    text-align: center;
+  
+}
+
+.project .card
+{
+    overflow: hidden;
+}
+
+.project .card:hover 
+{
+    border: 2px solid rgb(234, 234, 234);
+    box-shadow: 1px 1px 10px 5px rgb(120, 120, 120);
+}
+
+.service .card:hover 
+{
+    border: 2px solid white;
+    box-shadow: 1px 1px 10px 5px aqua;
+}
+
+.project img 
+{
+    height: 90%;
+}
+.project-info {
+    height: 100px;
+    width: 100%;
+    border-radius: 15px;
+    background-color: rgba(240, 255, 255, 0.44);
+    position: relative;
+    top: 50px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    backdrop-filter: blur(6px);
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.project-card:hover .project-info {
+    transform: translateY(-30px); /* Moves the card up */
+}
+
+@keyframes drag {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-30px);
+    }
+}
+
+.service,.project{
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 30px;
+}
+.card{
+    height: 400px;
+    width: 350px;
+    border: 1px #00ffffa7 solid;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-direction: column;
+    text-align: center;
+    img{
+        width: 60%;
+        height: 50%;
+    }
+}
+.service .card{
+    height: 320px;
+    width: 280px;
+
+}
+.project .card{
+    height: 550px;
+    width: 480px;
+}
+.card:hover img{
+    transform: none;
+}
+
+.contact{
+    height: 100vh;
+    width: 100%;
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(24, 23, 23);
+    .contact-inner{
+        height: 70vh;
+        width: 70%;
+        background-color: bisque;
+        display: flex;
+        .contact-right{
+            border-radius: 10px 0px 0px 10px;
+            height:100%;
+            width: 50%;
+            /* background-color: white; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+                width: 70%;
+                height: 70%;
+                object-fit: cover;
+                aspect-ratio: 1/2;
+                backdrop-filter: screen;
+            }
+        }
+        .contact-left{
+            height: 100%;
+            width: 50%;
+            
+            background-color: #00ffffa7;
+            border-radius: 0px 10px 10px 0px;
+            form{
+                width: 70%;
+                height: 80%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin: auto;
+                gap: 30px;
+                margin-top: 50px;
+            }
+            input{
+                background-color: none;
+                height: 40px;
+                border-top-color: transparent;
+                border-left-color: transparent;
+                outline: none;
+                box-shadow: 3px 3px 5px black;
+                font-size: 1rem;
+                color: #000038;
+                font-family: "Outfit",sans-serif;
+                font-size: 1.2rem;
+            }
+            
+            textarea{
+                resize: none;
+                height: 100px;
+            }
+        }
+
+    }
+
+}
+.contact-left{
+    height: 50%;
+    width: 50%;
+}
